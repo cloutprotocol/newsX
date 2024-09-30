@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink and SpaceX News Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/1280px-SpaceX_logo_black.svg.png" alt="SpaceX Logo" style="max-width: 300px; margin: 20px auto; display: block;">
+    <div id="status-container">
+        <div id="status" class="status"></div>
+        <button id="refresh-button" class="refresh-button">&#x21bb;</button>
+    </div>
+    <div id="filter-form">
+        <select id="topic-preferences">
+            <option value="all">All News</option>
+            <option value="Starlink">Starlink</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Elon">Elon</option>
+            <option value="Mars">Mars</option>
+            <option value="Starship">Starship</option>
+            <option value="Crew Dragon">Crew Dragon</option>
+            <option value="Falcon Rocket">Falcon Rocket</option>
+            <option value="NASA">NASA</option>
+        </select>
+        <input type="text" id="custom-search" placeholder="Enter custom search term">
+    </div>
+    <div id="news-container" class="news-container"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
